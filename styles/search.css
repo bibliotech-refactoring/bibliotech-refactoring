@@ -1,0 +1,27 @@
+.input-container{
+    width: 500px;
+        height: 40px;
+        background-color: white;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+}
+
+
+.input-container>input{
+    flex: 1;
+	height: 30px;
+	border: none;
+	outline: none;
+	font-size: 18px;
+	padding-left: 10px;
+}
+
+@media screen and (max-width: 576px){
+    .input-container{
+        width: 290px;
+        
+    }
+
+}

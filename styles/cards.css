@@ -1,0 +1,12 @@
+.containerBook {
+    width: 100%; 
+    height: 50%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    row-gap: 3rem;
+    margin-top: 3rem;
+    align-items: stretch;
+    justify-items: center;
+  }
+
+

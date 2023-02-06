@@ -1,0 +1,58 @@
+
+
+figure{
+    position:relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+figure img{
+    transition: all 400ms ease-in;
+    will-change: transform;
+}
+
+figure .layer{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--black-transparent);
+    transition: all 400ms ease-in;
+    opacity: 0;
+    visibility: hidden;
+   text-align: center;
+}
+
+figure:hover > .layer{
+    opacity: 1;
+    visibility: visible;
+}
+
+figure:hover > .layer button{
+    margin-top: 180px;
+    margin-bottom: 70px;
+}
+
+figure .layer button{
+    margin-bottom: 120px;
+    transition: all 400ms ease-out;
+    margin-top: 30px;
+    background-color: var(--black-transparent);
+    border-color: var(--white);
+    color: var(--white);
+    font-weight: 700;
+}
+
+#moreInfo{
+    display: none;
+  }
+
+  @media screen and (max-width: 576px){
+    #moreInfo{
+      display: inline-block;
+    }
+
+    figure .layer button{
+        display: none;
+    }
+  }
