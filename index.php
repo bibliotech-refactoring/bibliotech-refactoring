@@ -1,11 +1,13 @@
-<?php include("db.php")
+<?php include("config/Database.php");
+$db = new Database();
+$conn = $db->connection();
 ?>
 
-<?php include("applications/header.php")
+<?php include("view/partials/head.php")
 ?>
 
-<?php include("applications/nav.php");
-include("applications/banner.php")
+<?php include("view/partials/nav.php");
+include("view/partials/banner.php")
 ?>
 
 <?php if(isset($_SESSION['message'])) { 
@@ -56,5 +58,5 @@ while ($row = mysqli_fetch_array ($result_books)) {
 <?php } ?>
 </div> 
 
-<?php include("applications/footer.php")
+<?php include("view/partials/footer.php")
 ?>
