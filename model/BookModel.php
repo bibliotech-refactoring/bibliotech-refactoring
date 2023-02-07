@@ -15,8 +15,8 @@ class BookModel{
 /* $Bookmodel = new BookModel();
 var_dump($Bookmodel->conn);
  */
-$Bookmodel = new BookModel();
-var_dump($Bookmodel->getBooks());
+// $Bookmodel = new BookModel();
+// var_dump($Bookmodel->getBooks());
 
 
 
