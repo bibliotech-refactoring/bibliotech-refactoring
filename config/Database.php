@@ -17,3 +17,5 @@ class Database{
     }
 
 }
+/* $connection = new Database();
+var_dump($connection); */
