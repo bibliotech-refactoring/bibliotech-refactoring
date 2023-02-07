@@ -28,7 +28,7 @@ foreach($result as $book) :?>
     <div>
       <a href="/bibliotech/applications/see_description.php?isbn=<?= $book['isbn']?>">
         <figure>
-          <img src= ".../<?php echo $book ['image']?>" class="card-img-top" alt="Portada libro <?php echo $book ["title"] ?>">
+          <img src= "/bibliotech-refactoring/<?php echo $book ['image']?>" class="card-img-top" alt="Portada libro <?php echo $book ["title"] ?>">
           <div class="layer">
             <button  class="btn btn-light" type="submit" value="VER FICHA">VER FICHA</button>
           </div>
