@@ -11,7 +11,7 @@
                     </li>
                 </ul>
            
-            <form action="/bibliotech/pages/second_page.php" method="POST" class="d-flex" role="search">
+            <form action="/bibliotech-refactoring/view/books/search.php" method="POST" class="d-flex" role="search">
                 <div class="input-container">
                     <input class="form-control me-2" type="search" name= "search" placeholder="Buscar por nombre de autor o por título" aria-label="Search">
                     <button class="btn btn-light" value="search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>

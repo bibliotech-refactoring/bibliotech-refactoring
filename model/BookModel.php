@@ -28,6 +28,11 @@ class BookModel{
 
     }
 
+    public function searchBooks ($search){
+        $query=$this->conn->query("SELECT * FROM books WHERE concat(author_name,author_lastname,title) LIKE '%$search%'");
+
+        return $query ? $query->fetch_all():false;
+    }
 
 }
 /* $Bookmodel = new BookModel();

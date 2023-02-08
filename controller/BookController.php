@@ -28,6 +28,10 @@
         public function showBook($isbn){
             return ($this->model->showBook($isbn)!=false ? $this->model->showBook($isbn) :header("Location: /bibliotech-refactoring")); 
         }
+
+        public function searchBooks($search){
+            return ($this -> model->searchBooks($search) ? $this->model->searchBooks($search):'No se han encontrado resultados');
+        }
     }
 
     // $controller = new BookController();
