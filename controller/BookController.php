@@ -25,6 +25,9 @@
         public function deleteBook ($isbn) {
             return ($this->model->deleteBook($isbn) ? header("Location: /bibliotech-refactoring"):false);
         }
+        public function showBook($isbn){
+            return ($this->model->showBook($isbn)!=false ? $this->model->showBook($isbn) :header("Location: /bibliotech-refactoring")); 
+        }
     }
 
     // $controller = new BookController();

@@ -13,10 +13,10 @@ if (isset($_POST['save_book'])) {
         $_POST['description'],
         'assets/img/'.basename($_FILES['image']['name'])
     );
-
+    $image_name = basename($_FILES['image']['name']);
     $image_file = $_FILES['image']['tmp_name'];
 
-    $directory_route = '../assets/img/' . $image_name;
+    $directory_route = '/bibliotech-refactoring/assets/img/' . $image_name;
     $db_image_route = 'assets/img/' . $image_name;
-    move_uploaded_file($image_file, $directory_route);
+    move_uploaded_file($image_file, 'assets/img/'.basename($_FILES['image']['name']));
 }

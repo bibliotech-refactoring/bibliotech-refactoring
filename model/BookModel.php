@@ -22,6 +22,13 @@ class BookModel{
       return $query;
     }
 
+    public function showBook ($isbn){
+        $query=$this->conn->query("SELECT * FROM books WHERE isbn ='$isbn'");
+        return $query ? $query->fetch_all():false;
+
+    }
+
+
 }
 /* $Bookmodel = new BookModel();
 var_dump($Bookmodel->conn);
@@ -29,7 +36,6 @@ var_dump($Bookmodel->conn);
 // $Bookmodel = new BookModel();
 // var_dump($Bookmodel->getBooks());
 
-$Bookmodel = new BookModel();
 
 
 

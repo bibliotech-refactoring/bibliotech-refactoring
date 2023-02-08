@@ -26,7 +26,7 @@ foreach($result as $book) :?>
 <div class="card card-box-shadow"  style="width: 18rem;">
 
     <div>
-      <a href="/bibliotech/applications/see_description.php?isbn=<?= $book['isbn']?>">
+      <a href="/bibliotech-refactoring/view/books/show.php?isbn=<?= $book['isbn']?>">
         <figure>
           <img src= "/bibliotech-refactoring/<?php echo $book ['image']?>" class="card-img-top" alt="Portada libro <?php echo $book ["title"] ?>">
           <div class="layer">
@@ -40,7 +40,7 @@ foreach($result as $book) :?>
   <div class="card-body">
     <h3 class="card-title"><?php echo $book ['title'] ?></h3>
     <h5 class="card-text gray-text"><?php echo $book ['author_name'] . ' ' . $book['author_lastname'] ?></h5>
-    <a href="/bibliotech/applications/see_description.php?isbn=<?= $book['isbn']?>" id= "moreInfo" class="btn btn-secondary">Ver Ficha</a>
+    <a href="/bibliotech-refactoring/view/books/show.php?isbn=<?= $book['isbn']?>" id= "moreInfo" class="btn btn-secondary">Ver Ficha</a>
   </div>
 </div>
 <?php endforeach; ?>
