@@ -60,7 +60,7 @@ while ($row= mysqli_fetch_array($result)){?>
       cancelButtonText: 'Cancelar!'
     }).then((result) => {
       if (result.isConfirmed) {
-        window.location= "../applications/delete_book.php?isbn=<?= $row['isbn']?>"
+        window.location= "../view/books/delete.php?isbn=<?= $row['isbn']?>"
         Swal.fire(
           'Eliminado!',
           'El libro ha sido eliminado exitosamente.',

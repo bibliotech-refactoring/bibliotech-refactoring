@@ -17,6 +17,10 @@ class BookModel{
         return $query;
             
     }
+    public function deleteBook ($isbn){
+      $query=$this->conn->query("DELETE FROM books WHERE isbn ='$isbn'");
+      return $query;
+    }
 
 }
 /* $Bookmodel = new BookModel();

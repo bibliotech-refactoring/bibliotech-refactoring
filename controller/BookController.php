@@ -22,6 +22,9 @@
             }
             
         }
+        public function deleteBook ($isbn) {
+            return ($this->model->deleteBook($isbn) ? header("Location: /bibliotech-refactoring"):false);
+        }
     }
 
     // $controller = new BookController();
