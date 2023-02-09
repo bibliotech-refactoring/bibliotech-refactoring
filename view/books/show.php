@@ -58,13 +58,13 @@ foreach($result as $book) :?>
       text: "Si, has clicado por error, puedes cancelar!",
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
+      confirmButtonColor: '#d33',
+      cancelButtonColor: '#3085d6',
       confirmButtonText: 'Sí, eliminalo!',
       cancelButtonText: 'Cancelar!'
     }).then((result) => {
       if (result.isConfirmed) {
-        window.location= "../view/books/delete.php?isbn=<?= $book[1]?>"
+        window.location= "../books/delete.php?isbn=<?= $book[1]?>"
         Swal.fire(
           'Eliminado!',
           'El libro ha sido eliminado exitosamente.',

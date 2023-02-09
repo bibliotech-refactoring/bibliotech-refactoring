@@ -1,17 +1,22 @@
 
 <?php
     require_once("c://xampp/htdocs/bibliotech-refactoring/view/partials/head.php");
-
-    require_once("c://xampp/htdocs/bibliotech-refactoring/view/partials/nav.php");
-    
-    
-    
+    require_once("c://xampp/htdocs/bibliotech-refactoring/view/partials/nav.php"); 
     require_once("c://xampp/htdocs/bibliotech-refactoring/controller/BookController.php");
-        $controller = new BookController();
+        
+    $controller = new BookController();
 
         if(isset($_POST['search'])){
             $result = $controller->searchBooks($_POST['search']);
         }
+
+        if (($result) === "No se han encontrado resultados") {
+          $_SESSION['message'] = 'Libro no disponible';
+          $_SESSION['message_type'] = 'warning';
+          $_SESSION['message_title'] = 'Lo siento';
+          header("Location: /bibliotech-refactoring/");
+          return;
+      }
 
 if ($result):
     
@@ -57,13 +62,13 @@ foreach($result as $book) :?>
       text: "Si, has clicado por error, puedes cancelar!",
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
+      confirmButtonColor: '#d33',
+      cancelButtonColor: '#3085d6',
       confirmButtonText: 'Sí, eliminalo!',
       cancelButtonText: 'Cancelar!'
     }).then((result) => {
       if (result.isConfirmed) {
-        window.location= "../view/books/delete.php?isbn=<?= $book[1]?>"
+        window.location= "../books/delete.php?isbn=<?= $book[1]?>"
         Swal.fire(
           'Eliminado!',
           'El libro ha sido eliminado exitosamente.',

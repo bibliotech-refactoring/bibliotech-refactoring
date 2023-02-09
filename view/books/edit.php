@@ -5,12 +5,8 @@ require_once("c://xampp/htdocs/bibliotech-refactoring/controller/BookController.
 
 $controller = new BookController();
 $result = $controller->showBook($_GET['isbn']);
-    // if (isset($_GET['isbn'])){
-    //     $result = $controller->showBook($_GET['isbn']);
-    // }
-    // else 
-    //     echo("Búsqueda fallida");
 ?>
+
 <?php 
 if ($result):
 ?>
@@ -61,8 +57,10 @@ foreach($result as $book) :?>
                                     </div>
 
                                     <div class="d-grid gap-2">
-                                    <input type="submit" class="btn btn-dark btn-block" name="update"
-                                        value="Actualizar"></div>
+                                    <input type="submit" class="btn btn-success btn-block" name="update"
+                                        value="Actualizar">
+                                    <a href="/bibliotech-refactoring/view/books/index.php" class="btn btn-primary">Cancelar</a>
+                                    </div>
                 </form>
             </div>
         </div>
