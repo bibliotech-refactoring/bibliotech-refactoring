@@ -1,7 +1,7 @@
 
 <nav class= "navbar navbar-dark bg-dark">
         <div class="container">
-            <a href="/bibliotech/index.php" class="navbar-brand fw-bold fs-4">Biblio<span class="tech">Tech</span></a>
+            <a href="/bibliotech-refactoring/view/books/index.php" class="navbar-brand fw-bold fs-4">Biblio<span class="tech">Tech</span></a>
 
                 <ul class="navbar-nav">
                     <li class="nav-item">
