@@ -32,10 +32,10 @@ foreach($result as $book) :?>
         <p class="card-text gray-text"><?php echo $book [1] ?></p>
         <p class="card-text"><?php echo $book[5] ?></p>
 
-        <a href = "../applications/edit_book.php?isbn= <?php echo $book[1] ?>" class="btn btn-secondary desktop-icons"> 
+        <a href = "../books/edit.php?isbn= <?php echo $book[1] ?>" class="btn btn-secondary desktop-icons"> 
         Editar
         </a>
-        <a href = "../applications/edit_book.php?isbn= <?php echo $book[1] ?>" class="btn btn-secondary mobile-icons"> 
+        <a href = "../books/edit.php?isbn= <?php echo $book[1] ?>" class="btn btn-secondary mobile-icons"> 
         <i class="fa-solid fa-pen-to-square"></i>
         </a>
         <button class="btn btn-danger desktop-icons" onclick="deleteYesOrNo(event)">

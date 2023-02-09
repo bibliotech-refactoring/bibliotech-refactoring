@@ -33,10 +33,14 @@
             return ($this -> model->searchBooks($search) ? $this->model->searchBooks($search):'No se han encontrado resultados');
         }
 
+
         public function searchIsbn($isbn){
             return ($this -> model->searchIsbn($isbn) ? $this->model->searchIsbn($isbn):'No se han encontrado resultados');
         }
+
+        public function updateBook($isbn,$author_name,$author_lastName,$title,$description,$db_image_route){
+            return ($this->model->updateBook($isbn,$author_name,$author_lastName,$title,$description,$db_image_route) != false) ? header("Location:/bibliotech-refactoring/view/books/show.php?isbn=".$isbn) : header("Location: /bibliotech-refactoring");
+
+        }
     }
 
-    // $controller = new BookController();
-    // var_dump($controller->getBooks());
