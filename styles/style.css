@@ -48,9 +48,9 @@ body{
     height: 217px;
 }
 
-.errorText{
-    font-size: 0.5rem !important;
-    color: var(--red)!important;
+#errorText{
+    font-size: 0.8rem;
+    color: var(--red) !important;
 }
 
 @media screen and (max-width: 576px){

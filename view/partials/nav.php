@@ -5,9 +5,9 @@
 
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <a class="btn btn-dark" href="/bibliotech-refactoring/view/books/create.php">
                         Agregar Libro
-                        </button>
+                        </a>
                     </li>
                 </ul>
            

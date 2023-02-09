@@ -10,14 +10,13 @@ if (isset($_POST['save_book'])) {
     }
 
     $isbncheck = $controller->searchIsbn($isbn);
-    if ( $isbncheck[0] == "1") {
+    if ( $isbncheck[0][0] == "1") {
         $errors['isbn'] = 'Este isbn ya existe';
     }
 
-
     if (empty($errors)){
         $controller->addBooks(
-            isset($_POST['isbn']) ? $_POST['isbn'] : null,
+            $isbn,
             $_POST['title'],
             $_POST['author_name'],
             $_POST['author_lastname'],
@@ -30,6 +29,8 @@ if (isset($_POST['save_book'])) {
         $directory_route = '/bibliotech-refactoring/assets/img/' . $image_name;
         $db_image_route = 'assets/img/' . $image_name;
         move_uploaded_file($image_file, 'assets/img/'.basename($_FILES['image']['name']));
+        return;
     }
-    require('c://xampp/htdocs/bibliotech-refactoring/view/books/create.php');
+
+ require('c://xampp/htdocs/bibliotech-refactoring/view/books/create.php');
 }

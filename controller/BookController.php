@@ -18,7 +18,7 @@
             {
                return  header("Location: /bibliotech-refactoring"); 
             } else {
-               return 'No se han encontrado resultados';
+               return 'No se ha podido crear el libro';
             }
             
         }

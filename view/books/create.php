@@ -1,11 +1,11 @@
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Registro de Libro</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
+<?php
+require_once("c://xampp/htdocs/bibliotech-refactoring/view/partials/head.php");
+require_once("c://xampp/htdocs/bibliotech-refactoring/view/partials/nav.php");
+?>
+<div class="container p-4 mt-5">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body">
         <form action="/bibliotech-refactoring/view/books/store.php" method="POST" enctype='multipart/form-data'>
 
           <div class="form-group pb-1"><label for="title">Título</label>
@@ -27,7 +27,7 @@
             <input type="text" name="isbn" id="isbn" class="form-control" placeholder="Agrega ISBN" autofocus required maxlength="17" value="<?= $_POST['isbn'] ?? '' ?>">
           </div>
           <?php if (isset($errors['isbn'])) :?>
-            <p class= "mt-1 errorText"><?= $errors['isbn'] ?></p>
+            <p id="errorText" class=" fs-6 text-primary"><?= $errors['isbn'] ?></p>
             <?php endif; ?>
 
           <div class="form-group py-1"><label for="description">Descripción</label>
@@ -41,12 +41,15 @@
           </div>
 
           <div class="d-grid gap-2">
-          <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button> -->
+            <a href="/bibliotech-refactoring/view/books/index.php" class="btn btn-secondary">Cancelar</a>
             <input type="submit" class="btn btn-dark btn-block" name="save_book" value="Agregar registro">
           </div>
 
         </form>
-      </div>
+        </div>
+        </div>
     </div>
-  </div>
 </div>
+<?php
+require_once("c://xampp/htdocs/bibliotech-refactoring/view/partials/footer.php");
+?>
