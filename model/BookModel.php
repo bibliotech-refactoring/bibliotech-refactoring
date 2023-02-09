@@ -34,6 +34,11 @@ class BookModel{
         return $query ? $query->fetch_all():false;
     }
 
+    public function searchIsbn($isbn){
+        $query=$this->conn->query("SELECT EXISTS (SELECT * FROM books WHERE isbn='$isbn')");
+        return $query ? $query->fetch_all():false;
+    }
+
 }
 /* $Bookmodel = new BookModel();
 var_dump($Bookmodel->conn);

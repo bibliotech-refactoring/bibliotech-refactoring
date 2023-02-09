@@ -48,6 +48,11 @@ body{
     height: 217px;
 }
 
+.errorText{
+    font-size: 0.5rem !important;
+    color: var(--red)!important;
+}
+
 @media screen and (max-width: 576px){
     .mobile-icons{
         display: inline-block !important;

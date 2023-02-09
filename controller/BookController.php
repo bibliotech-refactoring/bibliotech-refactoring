@@ -32,6 +32,10 @@
         public function searchBooks($search){
             return ($this -> model->searchBooks($search) ? $this->model->searchBooks($search):'No se han encontrado resultados');
         }
+
+        public function searchIsbn($isbn){
+            return ($this -> model->searchIsbn($isbn) ? $this->model->searchIsbn($isbn):'No se han encontrado resultados');
+        }
     }
 
     // $controller = new BookController();
