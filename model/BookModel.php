@@ -34,6 +34,11 @@ class BookModel{
         return $query ? $query->fetch_all():false;
     }
 
+    public function updateBook($isbn,$author_name,$author_lastName,$title,$description,$db_image_route){
+        $query=$this->conn->query("UPDATE books set title = '$title', author_name = '$author_name', author_lastname = '$author_lastName', description = '$description', image = '$db_image_route' WHERE isbn = $isbn");
+        
+        return $query;
+    }
 }
 /* $Bookmodel = new BookModel();
 var_dump($Bookmodel->conn);
