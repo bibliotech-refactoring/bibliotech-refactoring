@@ -56,7 +56,8 @@ Trabajo en grupo en el que desarrollamos un CRUD con PHP vanilla conectado a una
 
 -[@ElviaBth] (https://github.com/ElviaBth)
 -[@pohengchan] (https://github.com/pohengchan)
--[@marchuori] (https://github.com/marchuovi)   
+-[@marchuovi] (https://github.com/marchuovi)   
+-[@NataliaVorobyeva] (https://github.com/NataliaVorobyeva)
 
 ## :blue_book:Acknowledgements
 
