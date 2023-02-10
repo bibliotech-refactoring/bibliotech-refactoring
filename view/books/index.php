@@ -2,6 +2,8 @@
 require_once ("c://xampp/htdocs/bibliotech-refactoring/view/partials/head.php");
 
 require_once ("c://xampp/htdocs/bibliotech-refactoring/view/partials/nav.php");
+
+require_once ("c://xampp/htdocs/bibliotech-refactoring/view/partials/banner.php");
 ?>
 
 <?php
